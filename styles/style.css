@@ -351,10 +351,17 @@ header {
 footer {
   background-color: #353535;
   display: flex;
-  width: 375px;
+  width: 100%;
   padding: 22px 25px;
   flex-direction: column;
   align-items: flex-start;
+}
+@media (min-width: 1024px) {
+  footer {
+    flex-direction: row-reverse;
+    align-items: baseline;
+    gap: 40px;
+  }
 }
 footer h4 {
   color: #fff;
@@ -455,13 +462,23 @@ footer .p {
 .howitworks {
   flex-shrink: 0;
   background-color: #fff;
-  gap: 25px;
-  display: flex;
-  flex-direction: column;
   margin-top: 48px;
+  padding-left: 24px;
 }
 .howitworks .hiw_title {
   margin-left: 20px;
+}
+.howitworks .hiw_items {
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .howitworks .hiw_items {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 24px;
+  }
 }
 .howitworks .fa-circle {
   color: #9356DC;
@@ -474,15 +491,20 @@ footer .p {
 }
 
 .hiw_box {
-  width: 322.486px;
+  width: 100%;
   height: 72.379px;
   flex-shrink: 0;
   border-radius: 20px;
   background-color: #F6F6F6;
   display: flex;
   align-content: center;
-  margin-left: 32.51px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 1024px) {
+  .hiw_box {
+    flex-flow: row wrap;
+    width: calc(33.3333333333% - 24px);
+  }
 }
 .hiw_box_text {
   color: #000;
@@ -557,14 +579,23 @@ footer .p {
   flex-shrink: 0;
   margin-left: 20px;
 }
+@media (min-width: 1024px) {
+  .card {
+    flex-flow: row wrap;
+  }
+}
 
 .cards {
-  width: 346px;
-  height: 251px;
   flex-shrink: 0;
   position: relative;
   border-radius: 15px;
   background: #fff;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .cards {
+    width: calc(50% - 18px);
+  }
 }
 .cards h3 {
   font-size: 18px;
