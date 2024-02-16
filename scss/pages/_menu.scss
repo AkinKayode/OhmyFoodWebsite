@@ -4,9 +4,10 @@
   .image {
     width: 100%;
     height: 275px;
-    display: block;
+
     object-fit: cover;
   }
+
   //put your scss styles for menu page in here
 
   .btn {
@@ -16,8 +17,127 @@
   .content {
     position: relative;
     border-radius: 40px 40px 0px 0px;
-    background-color: aqua;
+    background-color: $primarybackground;
     padding: 20px;
-    margin-top: -100px;
+    margin-top: -50px;
+  }
+  h1 {
+    color: var(--Black, #101010);
+    font-family: Shrikhand;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  h2 {
+    color: #000;
+    width: 275px;
+    height: 27px;
+    flex-shrink: 0;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+}
+.line {
+  background: #99e2d0;
+  width: 40px;
+  height: 3px;
+  margin-top: -1px;
+}
+
+.ards {
+  .ard {
+    border-radius: 15.043px;
+    background: var(--White, #fff);
+    box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
+    width: 349px;
+  }
+
+  .words {
+    border-radius: 15.043px;
+    background: var(--White, #fff);
+  }
+  h2 {
+    overflow: hidden;
+    color: #000;
+    margin: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  p {
+    margin-top: -10px;
+    overflow: hidden;
+    color: #000;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Roboto;
+    font-size: 15.043px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin: 15px;
+  }
+}
+.eggs {
+  background-color: $primarybackground;
+}
+
+.titles {
+  h2 {
+    color: #000;
+    width: 275px;
+    height: 27px;
+    flex-shrink: 0;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+}
+.button {
+  display: flex;
+  justify-content: center;
+}
+button {
+  margin: 0;
+  padding: 10px;
+  border-radius: 25px;
+
+  background: var(
+    --Button-Gradient,
+    linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%)
+  );
+
+  /* Shadow/Button */
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  // font
+  color: #fff;
+  display: inline-block;
+  font-weight: 500;
+  font-family: Roboto;
+  width: 186px;
+  height: 50px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+header {
+  .fa-arrow-left-long {
+    align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    flex-shrink: 0;
   }
 }

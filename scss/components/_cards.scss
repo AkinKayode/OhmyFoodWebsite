@@ -57,8 +57,9 @@
   }
 }
 .fa-heart {
-  margin-right: 60%;
   color: brown;
   display: inline-flex;
-  flex-direction: row;
+  position: absolute;
+  top: 0px;
+  right: 20px;
 }
