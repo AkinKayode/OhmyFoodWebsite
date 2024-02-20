@@ -336,6 +336,89 @@ p {
   }
 }
 
+.site-loader {
+  animation: hideAnimation 0s ease-in 5s;
+  opacity: 1;
+  animation-fill-mode: forwards;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 1;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes hideAnimation {
+  to {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+}
+.loading h2 {
+  color: black;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.loading span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.6em;
+  height: 0.6em;
+  margin: 0.19em;
+  background: #ff79da;
+  border-radius: 0.6em;
+  animation: loading 1s infinite alternate;
+}
+
+/*
+ * Dots Colors
+ * Smarter targeting vs nth-of-type?
+ */
+.loading span:nth-of-type(2) {
+  background: #9356dc;
+  animation-delay: 0.2s;
+}
+
+.loading span:nth-of-type(3) {
+  background: #ff79da;
+  animation-delay: 0.4s;
+}
+
+.loading span:nth-of-type(4) {
+  background: #9356dc;
+  animation-delay: 0.6s;
+}
+
+.loading span:nth-of-type(5) {
+  background: #ff79da;
+  animation-delay: 0.8s;
+}
+
+.loading span:nth-of-type(6) {
+  background: #9356dc;
+  animation-delay: 1s;
+}
+
+.loading span:nth-of-type(7) {
+  background: #ff79da;
+  animation-delay: 1.2s;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 header {
   display: flex;
   justify-content: center;
@@ -381,15 +464,7 @@ footer p {
   line-height: normal;
   color: white;
   position: relative;
-}
-footer .p {
-  font-weight: 400;
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  position: relative;
+  margin: 5px 0;
 }
 
 .btn {
@@ -489,6 +564,7 @@ footer .p {
   background: var(--White, #fff);
   box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
   width: 349px;
+  margin: 0px;
 }
 .ards .words {
   border-radius: 15.043px;
@@ -534,11 +610,15 @@ footer .p {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 .button {
   display: flex;
   justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 button {
@@ -563,8 +643,9 @@ header .fa-arrow-left-long {
   align-items: center;
   display: flex;
   align-items: center;
-  gap: 42px;
+  gap: 50px;
   flex-shrink: 0;
+  left: 50px;
 }
 
 .hiw {
@@ -654,14 +735,24 @@ header .fa-arrow-left-long {
   flex-shrink: 0;
   margin-left: 20px;
 }
+@media (min-width: 1024px) {
+  .card {
+    flex-flow: row wrap;
+  }
+}
 
 .cards {
-  width: 346px;
-  height: 251px;
   flex-shrink: 0;
   position: relative;
   border-radius: 15px;
   background: #fff;
+  width: 100%;
+  padding-bottom: -48px;
+}
+@media (min-width: 1024px) {
+  .cards {
+    width: calc(50% - 18px);
+  }
 }
 .cards h3 {
   font-size: 18px;
@@ -669,6 +760,9 @@ header .fa-arrow-left-long {
   font-weight: 700;
   line-height: normal;
   margin-left: 13px;
+  width: 267px;
+  height: 20px;
+  flex-shrink: 0;
 }
 .cards p {
   color: #000;
@@ -692,9 +786,40 @@ header .fa-arrow-left-long {
 }
 
 .fa-heart {
-  color: brown;
-  display: inline-flex;
+  top: 197px;
+  right: 0px;
+  font-size: 30px;
+  flex-shrink: 0;
   position: absolute;
-  top: 0px;
-  right: 20px;
+  margin-right: 25px;
+  background: white;
+}
+
+.-heart {
+  position: absolute;
+  margin-right: 25px;
+  background: --webkit-linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+}
+
+.new {
+  position: absolute;
+  border-radius: 2px;
+  background: var(--Green, #99e2d0);
+  /* Shadow/Badge */
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  top: 30px;
+  left: 311px;
+  width: 80px;
+  height: 29px;
+  flex-shrink: 0;
+  color: var(--Green-Font, #008766);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.new_h4 {
+  margin: 0px auto;
 }/*# sourceMappingURL=style.css.map */
