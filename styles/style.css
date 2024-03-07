@@ -516,6 +516,11 @@ footer p {
   margin-bottom: 29px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .menu-page .image {
   width: 100%;
   height: 275px;
@@ -552,28 +557,42 @@ footer p {
   line-height: normal;
 }
 
-.line {
-  background: #99e2d0;
-  width: 40px;
-  height: 3px;
-  margin-top: -1px;
-}
-
 .ards .ard {
   border-radius: 15.043px;
   background: var(--White, #fff);
   box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
   width: 349px;
   margin: 0px;
+  position: relative;
+  height: 72px;
+  overflow: hidden;
+}
+.ards .animated-box {
+  position: absolute;
+  top: 0;
+  right: -61px;
+  width: 60px;
+  background: #99e2d0;
+  height: 100%;
+  border-radius: 0 15.043px 15.043px 0;
+  transition: right 2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ards .ard:hover .animated-box {
+  right: 0;
+}
+.ards ard:hover p.hover span.hover {
+  margin-right: 75px;
 }
 .ards .words {
-  border-radius: 15.043px;
-  background: var(--White, #fff);
+  margin-left: 15px;
+  text-overflow: ellipsis;
 }
 .ards h2 {
   overflow: hidden;
   color: #000;
-  margin: 15px;
   text-overflow: ellipsis;
   white-space: nowrap;
   font-family: Roboto;
@@ -583,7 +602,6 @@ footer p {
   line-height: normal;
 }
 .ards p {
-  margin-top: -10px;
   overflow: hidden;
   color: #000;
   text-overflow: ellipsis;
@@ -593,7 +611,19 @@ footer p {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
-  margin: 15px;
+}
+.ards span {
+  overflow: hidden;
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  float: right;
+  margin-right: 15px;
 }
 
 .eggs {
@@ -612,6 +642,15 @@ footer p {
   line-height: normal;
   margin-bottom: 40px;
   margin-top: 40px;
+  position: relative;
+}
+.titles h2::after {
+  content: "";
+  position: absolute;
+  border-bottom: 3px solid #99e2d0;
+  width: 30px;
+  left: 0;
+  bottom: -5px;
 }
 
 .button {
@@ -638,16 +677,59 @@ button {
   text-align: center;
   margin: 0 auto;
 }
+button:hover {
+  /* Lighten background on hover */
+  background: linear-gradient(193deg, #a565e5 -11.44%, #ff8bd5 123.93%);
+  /* Enhance drop shadow on hover */
+  box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
 
-header .fa-arrow-left-long {
+header {
+  gap: 50px;
+  margin-right: 42px;
+}
+header .fa-arrow-left-long,
+header a {
   align-items: center;
   display: flex;
-  align-items: center;
   gap: 50px;
   flex-shrink: 0;
   left: 50px;
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
+.animate1,
+.animate2,
+.animate3 {
+  animation: slide-up-fade-in ease 5s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.animate1 {
+  animation-delay: 0s;
+}
+
+.animate2 {
+  animation-delay: 2s;
+}
+
+.animate3 {
+  animation-delay: 4s;
+}
+
+@keyframes slide-up-fade-in {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 140px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
 .hiw {
   background-color: #fff;
   margin-top: 48px;
@@ -749,6 +831,10 @@ header .fa-arrow-left-long {
   width: 100%;
   padding-bottom: -48px;
 }
+.cards_a {
+  text-decoration: none;
+  color: inherit;
+}
 @media (min-width: 1024px) {
   .cards {
     width: calc(50% - 18px);
@@ -802,13 +888,12 @@ header .fa-arrow-left-long {
 }
 
 .new {
-  position: absolute;
   border-radius: 2px;
   background: var(--Green, #99e2d0);
   /* Shadow/Badge */
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   top: 30px;
-  left: 311px;
+  left: 211px;
   width: 80px;
   height: 29px;
   flex-shrink: 0;
