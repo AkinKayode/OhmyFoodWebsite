@@ -11,8 +11,8 @@ a {
     object-fit: cover;
   }
 
-  //put your scss styles for menu page in here
-
+  .container {
+  }
   .btn {
     padding-right: 20px;
     padding-left: 20px;
@@ -55,6 +55,12 @@ a {
     margin: 0px;
     position: relative;
     height: 72px;
+    margin-top: 12px;
+
+    overflow: hidden;
+    @include desktop-only {
+      width: calc(100% / 2 - 18px);
+    }
   }
 
   .animated-box {
@@ -94,9 +100,9 @@ a {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    margin-top: 5px;
   }
   p {
-    overflow: hidden;
     color: #000;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -105,6 +111,7 @@ a {
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+    margin-bottom: 10px;
   }
   span {
     overflow: hidden;
