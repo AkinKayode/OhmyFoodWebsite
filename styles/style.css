@@ -530,6 +530,10 @@ a {
   height: 275px;
   object-fit: cover;
 }
+.menu-page .cover {
+  max-width: 0px;
+  margin: 0px;
+}
 .menu-page .btn {
   padding-right: 20px;
   padding-left: 20px;
@@ -568,14 +572,19 @@ a {
   width: 349px;
   margin: 0px;
   position: relative;
-  height: 72px;
   margin-top: 12px;
   overflow: hidden;
 }
-@media (min-width: 1024px) {
-  .ards .ard {
-    width: calc(50% - 18px);
-  }
+.ards .align {
+  position: absolute;
+  bottom: -4px;
+  right: 0px;
+  margin-right: -220px;
+}
+.ards .align:hover {
+  padding-right: 100px;
+  transition: right 2s ease-in-out;
+  z-index: 10;
 }
 .ards .animated-box {
   position: absolute;
@@ -593,35 +602,54 @@ a {
 .ards .ard:hover .animated-box {
   right: 0;
 }
-.ards ard:hover p.hover span.hover {
-  margin-right: 75px;
+.ards .ard:hover p,
+.ards .ard:hover h2 {
+  padding-right: 105px;
+}
+.ards .ard:hover .price {
+  right: 70px;
 }
 .ards .words {
+  position: relative;
   margin-left: 15px;
-  text-overflow: ellipsis;
+  padding: 5px;
 }
-.ards h2 {
-  overflow: hidden;
-  color: #000;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-family: Roboto;
+.ards .price {
+  position: absolute;
+  right: 0;
+  bottom: 0;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
-  margin-top: 5px;
+  font-family: Roboto;
+  right: 15px;
+  bottom: 10px;
+  transition: right 2s ease-in-out;
 }
+.ards h2,
 .ards p {
-  color: #000;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   font-family: Roboto;
-  font-size: 15.043px;
-  font-style: normal;
-  font-weight: 300;
+  color: #000;
   line-height: normal;
-  margin-bottom: 10px;
+  font-style: normal;
+  padding-right: 60px;
+  transition: padding-right 2s ease-in-out;
+}
+.ards h2 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.ards p {
+  font-family: Roboto;
+  font-size: 15.043px;
+  font-weight: 300;
+  position: relative;
 }
 .ards span {
   overflow: hidden;

@@ -10,7 +10,10 @@ a {
 
     object-fit: cover;
   }
-
+  .cover {
+    max-width: 0px;
+    margin: 0px;
+  }
   .container {
   }
   .btn {
@@ -54,13 +57,24 @@ a {
     width: 349px;
     margin: 0px;
     position: relative;
-    height: 72px;
     margin-top: 12px;
 
     overflow: hidden;
     @include desktop-only {
-      width: calc(100% / 2 - 18px);
+      // width: calc(100% / 2 - 18px);
     }
+  }
+  .align {
+    position: absolute;
+
+    bottom: -4px;
+    right: 0px;
+    margin-right: -220px;
+  }
+  .align:hover {
+    padding-right: 100px;
+    transition: right 2s ease-in-out;
+    z-index: 10;
   }
 
   .animated-box {
@@ -80,39 +94,63 @@ a {
   .ard:hover .animated-box {
     right: 0;
   }
-  ard:hover p.hover span.hover {
-    margin-right: 75px;
+  .ard:hover p,
+  .ard:hover h2 {
+    padding-right: 105px;
+  }
+
+  .ard:hover .price {
+    right: 70px;
   }
 
   .words {
+    position: relative;
     margin-left: 15px;
-    text-overflow: ellipsis;
+    padding: 5px;
+    // text-overflow: ellipsis;
   }
 
-  h2 {
-    overflow: hidden;
-    color: #000;
-
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-family: Roboto;
+  .price {
+    position: absolute;
+    right: 0;
+    bottom: 0;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    line-height: normal;
-    margin-top: 5px;
+    font-family: Roboto;
+    right: 15px;
+    bottom: 10px;
+    transition: right 2s ease-in-out;
   }
+
+  h2,
   p {
-    color: #000;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
     text-overflow: ellipsis;
     white-space: nowrap;
     font-family: Roboto;
-    font-size: 15.043px;
-    font-style: normal;
-    font-weight: 300;
+    color: #000;
     line-height: normal;
-    margin-bottom: 10px;
+    font-style: normal;
+    padding-right: 60px;
+    transition: padding-right 2s ease-in-out;
   }
+
+  h2 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  p {
+    font-family: Roboto;
+    font-size: 15.043px;
+    font-weight: 300;
+    position: relative;
+  }
+
   span {
     overflow: hidden;
     color: #000;
