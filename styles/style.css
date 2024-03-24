@@ -695,7 +695,7 @@ a {
   border-bottom: 3px solid #99e2d0;
   width: 30px;
   left: 0;
-  bottom: -5px;
+  bottom: 0px;
 }
 
 .button {
@@ -737,18 +737,13 @@ header .fa-arrow-left-long,
 header a {
   display: flex;
   justify-content: center;
-  margin-right: 160px;
+  position: absolute;
+  left: 24px;
   position: absolute;
   flex-shrink: 0;
   bottom: 14px;
   text-decoration: none;
   flex-shrink: 0;
-}
-@media (min-width: 1024px) {
-  header .fa-arrow-left-long,
-  header a {
-    margin-right: 600px;
-  }
 }
 
 .animate1,
@@ -781,13 +776,27 @@ header a {
     transform: translate(0px, 0px);
   }
 }
+.menu-page .titles2 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-width: 307px;
+  margin: 0 auto;
+}
+.menu-page .fa-heart {
+  top: 25px;
+  right: 0;
+  background-color: transparent;
+  position: absolute;
+}
+
 .hiw {
   background-color: #fff;
   margin-top: 48px;
   padding-left: 24px;
 }
 .hiw .hiw_title {
-  margin-left: 20px;
+  left: 0px;
 }
 .hiw .hiw_items {
   gap: 25px;

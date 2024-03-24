@@ -5,7 +5,7 @@
   padding-left: 24px;
 
   .hiw_title {
-    margin-left: 20px;
+    left: 0px;
   }
   .hiw_items {
     gap: 25px;
@@ -17,16 +17,6 @@
       gap: 24px;
     }
   }
-
-  // .fa-circle {
-  //   color: $primary;
-  //   width: 24px;
-  //   height: 24px;
-  //   flex-shrink: 0;
-  //   margin-left: 20px;
-  //   align-content: center;
-  //   justify-content: center;
-  // }
 }
 
 .hiw_box {
