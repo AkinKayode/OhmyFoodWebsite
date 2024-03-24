@@ -545,6 +545,10 @@ a {
   padding: 20px;
   margin-top: -50px;
 }
+.menu-page .content-wrapper {
+  max-width: 680px;
+  margin: 0 auto;
+}
 .menu-page h1 {
   color: var(--Black, #101010);
   font-family: Shrikhand;
@@ -569,7 +573,6 @@ a {
   border-radius: 15.043px;
   background: var(--White, #fff);
   box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
-  width: 349px;
   margin: 0px;
   position: relative;
   margin-top: 12px;
@@ -597,6 +600,10 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.ards .animated-tick {
+  color: #fff;
+  font-size: 25px;
 }
 .ards .ard:hover .animated-box {
   right: 0;
@@ -724,18 +731,24 @@ button:hover {
 }
 
 header {
-  gap: 50px;
-  margin-right: 42px;
+  position: relative;
 }
 header .fa-arrow-left-long,
 header a {
-  align-items: center;
   display: flex;
-  gap: 50px;
+  justify-content: center;
+  margin-right: 160px;
+  position: absolute;
   flex-shrink: 0;
-  left: 50px;
+  bottom: 14px;
   text-decoration: none;
   flex-shrink: 0;
+}
+@media (min-width: 1024px) {
+  header .fa-arrow-left-long,
+  header a {
+    margin-right: 600px;
+  }
 }
 
 .animate1,
@@ -854,9 +867,11 @@ header a {
   flex-shrink: 0;
   margin-left: 20px;
   margin-right: 20px;
+  gap: 18px;
 }
 @media (min-width: 1024px) {
   .card {
+    gap: 50px;
     flex-flow: row wrap;
   }
 }
@@ -867,7 +882,6 @@ header a {
   border-radius: 15px;
   background: #fff;
   width: 100%;
-  padding-bottom: -48px;
 }
 .cards_a {
   text-decoration: none;
@@ -875,7 +889,7 @@ header a {
 }
 @media (min-width: 1024px) {
   .cards {
-    width: calc(50% - 18px);
+    width: calc(50% - 50px);
   }
 }
 .cards h3 {
@@ -932,7 +946,7 @@ header a {
   opacity: 0;
 }
 
-.heart-fill:hover {
+.heart-items:hover .heart-fill {
   cursor: pointer;
   opacity: 1;
 }
@@ -942,8 +956,9 @@ header a {
   background: var(--Green, #99e2d0);
   /* Shadow/Badge */
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  top: 30px;
-  left: 211px;
+  position: absolute;
+  top: 20px;
+  right: 25px;
   width: 80px;
   height: 29px;
   flex-shrink: 0;
@@ -953,7 +968,7 @@ header a {
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
+  line-height: 29px;
 }
 .new_h4 {
   margin: 0px auto;

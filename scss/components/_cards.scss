@@ -14,7 +14,10 @@
   flex-shrink: 0;
   margin-left: 20px;
   margin-right: 20px;
+  gap: 18px;
+
   @include desktop-only {
+    gap: 50px;
     flex-flow: row wrap;
   }
 }
@@ -31,9 +34,8 @@
   }
 
   @include desktop-only {
-    width: calc(100% / 2 - 18px);
+    width: calc(100% / 2 - 50px);
   }
-  padding-bottom: -48px;
 
   // /* Shadow/Card */
 
@@ -90,7 +92,7 @@
   -webkit-text-fill-color: transparent;
   opacity: 0;
 }
-.heart-fill:hover {
+.heart-items:hover .heart-fill {
   cursor: pointer;
   opacity: 1;
 }
@@ -100,8 +102,9 @@
   background: var(--Green, #99e2d0);
   /* Shadow/Badge */
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  top: 30px;
-  left: 211px;
+  position: absolute;
+  top: 20px;
+  right: 25px;
   width: 80px;
   height: 29px;
   flex-shrink: 0;
@@ -111,7 +114,7 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
+  line-height: 29px;
 
   &_h4 {
     margin: 0px auto;
